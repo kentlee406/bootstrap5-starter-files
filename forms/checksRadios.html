@@ -9,14 +9,14 @@
 <p>注意，label 與 input id 請務必對應上</p>
 
 <div class="demo">
-  <div class="練習">
-    <input class="練習" type="checkbox" value="" id="flexCheckDefault">
-    <label class="練習" for="flexCheckDefault">
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+    <label class="form-check-label" for="flexCheckDefault">
       Default checkbox
     </label>
   </div>
   <div class="form-check">
-    <input class="form-check-input" type="checkbox" value="" id="練習" checked>
+    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
     <label class="form-check-label" for="flexCheckChecked">
       Checked checkbox
     </label>
@@ -37,10 +37,10 @@
 </div>
 
 <script>
-// const inputs = document.querySelectorAll('.indeterminate');
-// for(var i = 0; i < inputs.length; i++) {
-//   inputs[i].indeterminate = true;
-// }
+const inputs = document.querySelectorAll('.indeterminate');
+for(var i = 0; i < inputs.length; i++) {
+  inputs[i].indeterminate = true;
+}
 </script>
 
 <h2>禁用</h2>
@@ -49,13 +49,13 @@
 
 <div class="demo">
   <div class="form-check">
-    <input class="form-check-input" type="checkbox" value="" id="flexCheckDisabled" 練習>
+    <input class="form-check-input" type="checkbox" value="" id="flexCheckDisabled" disabled>
     <label class="form-check-label" for="flexCheckDisabled">
       Disabled checkbox
     </label>
   </div>
   <div class="form-check">
-    <input class="form-check-input" type="checkbox" value="" id="flexCheckCheckedDisabled" checked 練習>
+    <input class="form-check-input" type="checkbox" value="" id="flexCheckCheckedDisabled" checked disabled>
     <label class="form-check-label" for="flexCheckCheckedDisabled">
       Disabled checked checkbox
     </label>
@@ -87,7 +87,7 @@
 
 <div class="demo">
   <div class="form-check">
-    <input class="form-check-input" type="radio" name="flexRadioDisabled" id="flexRadioDisabled" 練習>
+    <input class="form-check-input" type="radio" name="flexRadioDisabled" id="flexRadioDisabled" disabled>
     <label class="form-check-label" for="flexRadioDisabled">
       Disabled radio
     </label>
@@ -105,19 +105,19 @@
 <p>為以下元素加上 .form-switch 套用視覺效果</p>
 
 <div class="demo">
-  <div class="form-check 練習">
+  <div class="form-check form-switch">
     <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
     <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label>
   </div>
-  <div class="form-check 練習">
+  <div class="form-check form-switch">
     <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
     <label class="form-check-label" for="flexSwitchCheckChecked">Checked switch checkbox input</label>
   </div>
-  <div class="form-check 練習">
+  <div class="form-check form-switch">
     <input class="form-check-input" type="checkbox" id="flexSwitchCheckDisabled" disabled>
     <label class="form-check-label" for="flexSwitchCheckDisabled">Disabled switch checkbox input</label>
   </div>
-  <div class="form-check 練習">
+  <div class="form-check form-switch">
     <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" checked disabled>
     <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">Disabled checked switch checkbox input</label>
   </div>
@@ -128,30 +128,30 @@
 <p>加上 .form-check-inline 使其轉換成單行</p>
 
 <div class="demo">
-  <div class="form-check 練習">
+  <div class="form-check form-check-inline">
     <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
     <label class="form-check-label" for="inlineCheckbox1">1</label>
   </div>
-  <div class="form-check 練習">
+  <div class="form-check form-check-inline">
     <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
     <label class="form-check-label" for="inlineCheckbox2">2</label>
   </div>
-  <div class="form-check 練習">
+  <div class="form-check form-check-inline">
     <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
     <label class="form-check-label" for="inlineCheckbox3">3 (disabled)</label>
   </div>
 </div>
 
 <div class="demo">
-  <div class="form-check 練習">
+  <div class="form-check form-check-inline">
     <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
     <label class="form-check-label" for="inlineRadio1">1</label>
   </div>
-  <div class="form-check 練習">
+  <div class="form-check form-check-inline">
     <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
     <label class="form-check-label" for="inlineRadio2">2</label>
   </div>
-  <div class="form-check 練習">
+  <div class="form-check form-check-inline">
     <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled>
     <label class="form-check-label" for="inlineRadio3">3 (disabled)</label>
   </div>
@@ -183,9 +183,9 @@
 </ul>
 
 <div class="demo">
-  <input type="checkbox" class="練習" id="btn-check" autocomplete="off">
+  <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
   <label class="btn btn-outline-primary" for="btn-check">Single toggle</label>
-  <input type="checkbox" class="練習" id="btn-check-2" checked autocomplete="off">
+  <input type="checkbox" class="btn-check" id="btn-check-2" checked autocomplete="off">
   <label class="btn btn-outline-primary" for="btn-check-2">Checked</label>
   <input type="checkbox" class="btn-check" id="btn-check-3" autocomplete="off" disabled>
   <label class="btn btn-outline-primary" for="btn-check-3">Disabled</label>
