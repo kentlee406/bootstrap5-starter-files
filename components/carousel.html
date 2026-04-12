@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="zh-TW"><head><title>Carousel</title><meta name="viewport" content="width=device-width, initial-scale=1"><link href="images/favicon.ico" rel="shortcut icon"><meta charset="UTF-8"><script src="/javascripts/vendor.js"></script></head><body class="bg-lighter">
 <div class="container main my-5"><div class="row justify-content-center"><main class="col-md-8 post">
 <!-- 章節標題 --><div class="mb-4"><h1 class="mt-0 text-muted">Carousel</h1><small>檔名：<code>carousel.html</code></small></div>
-<!-- 🔥🔥練習開始🔥🔥 -->
+  <!-- 🔥🔥練習開始🔥🔥 -->
 <h2>Example</h2>
 <p><b>需要將 <code>.active</code> 添加到其中一個輪播元素上</b>，否則輪播將不可見。另外一定要在 <code> .carousel </code> 上為控制項元件設置一個唯一的 <code>id</code>，特別是當你在一個頁面上使用多個輪播的時候。控制項和指示器元素必須具有與 <code>.carousel</code> 元素之 id 符合的 <code>data-bs-target</code> 屬性（或是連結的 <code>href</code>）</p>
 
@@ -13,7 +13,7 @@
 </ol>
 
 <div class="demo">
-    <div id="carouselExampleSlidesOnly" class="carousel slide" 練習>
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img src="https://images.unsplash.com/photo-1580912534328-fbc00d6f7e9f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=747&q=80" class="d-block w-100" alt="..." style="height: 400px; object-fit: cover;">
@@ -46,14 +46,14 @@
             <img src="https://images.unsplash.com/photo-1527777309916-b59323b01809?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" class="d-block w-100" alt="..." style="height: 400px; object-fit: cover;">
           </div>
         </div>
-        <!-- <button class="carousel-control-prev" type="button" 練習 data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" 練習 data-bs-slide="next">
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
-        </button> -->
+        </button>
     </div>
 </div>
 
@@ -63,11 +63,11 @@
 
 <div class="demo">
   <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-    <!-- <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleIndicators" 練習 class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" 練習 aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" 練習 aria-label="Slide 3"></button>
-    </div> -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-silde-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img src="https://images.unsplash.com/photo-1527777309916-b59323b01809?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" class="d-block w-100" alt="..." style="height: 400px; object-fit: cover;">
@@ -103,21 +103,21 @@
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img src="https://images.unsplash.com/photo-1580912534328-fbc00d6f7e9f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=747&q=80" class="d-block w-100" class="d-block w-100" alt="..." style="height: 400px; object-fit: cover;">
-        <div class="練習 d-none d-md-block">
+        <div class="carousel-caption d-none d-md-block">
           <h5>First slide label</h5>
           <p>Some representative placeholder content for the first slide.</p>
         </div>
       </div>
       <div class="carousel-item">
         <img src="https://images.unsplash.com/photo-1527777309916-b59323b01809?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" class="d-block w-100" alt="..." style="height: 400px; object-fit: cover;">
-        <div class="練習 d-none d-md-block">
+        <div class="carousel-caption d-none d-md-block">
           <h5>Second slide label</h5>
           <p>Some representative placeholder content for the second slide.</p>
         </div>
       </div>
       <div class="carousel-item">
         <img src="https://images.unsplash.com/photo-1591133258306-db968099262d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" class="d-block w-100" alt="..." style="height: 400px; object-fit: cover;">
-        <div class="練習 d-none d-md-block">
+        <div class="carousel-caption d-none d-md-block">
           <h5>Third slide label</h5>
           <p>Some representative placeholder content for the third slide.</p>
         </div>
@@ -138,7 +138,7 @@
 <p>將 <code>.carousel-fade</code> 加到輪播中，以使用淡入淡出的取代滑動的動畫效果</p>
 
 <div class="demo">
-  <div id="carouselExampleFade" class="carousel slide 練習" data-bs-ride="carousel">
+  <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img src="https://images.unsplash.com/photo-1580691155297-c6dfa3ca61c4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" class="d-block w-100" alt="..." style="height: 400px; object-fit: cover;">
@@ -167,10 +167,10 @@
 <div class="demo">
   <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
-      <div class="carousel-item active" data-bs-interval="練習">
+      <div class="carousel-item active" data-bs-interval="2000">
         <img src="https://images.unsplash.com/photo-1600635800433-f3d9b2aa9674?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" class="d-block w-100" alt="..." style="height: 400px; object-fit: cover;">
       </div>
-      <div class="carousel-item" data-bs-interval="練習">
+      <div class="carousel-item" data-bs-interval="500">
         <img src="https://images.unsplash.com/photo-1606165194862-535b4a4bbaf4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" class="d-block w-100" alt="..." style="height: 400px; object-fit: cover;">
       </div>
       <div class="carousel-item">
@@ -193,7 +193,7 @@
 <p>使用 data-bs-touch="false" 禁止觸控事件</p>
 
 <div class="demo">
-  <div id="carouselExampleControlsNoTouching" class="carousel slide" 練習 data-bs-interval="false">
+  <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img src="https://images.unsplash.com/photo-1606165194862-535b4a4bbaf4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" class="d-block w-100" alt="..." style="height: 400px; object-fit: cover;">
@@ -220,7 +220,7 @@
 <p>在 <code>.carousel</code> 上添加 <code>.carousel-dark</code> 以獲得暗色系的控制項、指示器及字幕。控制項已透過 CSS 屬性 <code>filter</code> 從它們預設的白色充填反轉。字幕與控制項具有用來自定義 <code>color</code> 及 <code>background-color</code> 的額外 Sass 變數。</p>
 
 <div class="demo">
-  <div id="carouselExampleDark" class="carousel 練習 slide" data-bs-ride="carousel">
+  <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
       <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -260,8 +260,6 @@
   </div>
 </div>
 <!-- 🙇🙇練習結束🙇🙇 -->
-</main>
-</div>
 
   <div class="btn-group position-fixed" style="top: 66px; right: 10px">
   <button type="button" class="btn btn-bs5 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
